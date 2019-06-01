@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>LUCY'S PARTY RENTAL/title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://fonts.googleapis.com/css?family=Audiowide|Exo+2" rel="stylesheet">
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.min.css"/>
+
+<!--custom css--->
+
+<link rel="stylesheet" type="text/css" href="C:\Users\crosb\projects\lucy_rentals\test3.css">
+
+<style type="text/css">
+
+
+==================================================
+Base Styles
+font-family: 'Audiowide', cursive;
+font-family: 'Exo 2', sans-serif;
+================================================== 
+*/
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+* a {
+	text-decoration: none;
+	font-family: 'Exo 2', sans-serif;
+}
+
+body {
+	padding 0;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Audiowide', cursive;
+	letter-spacing: 4px;
+}
+
+p {
+	line-height: 1.5em;
+	letter-spacing: 1px;
+	font-family: 'Exo 2', sans-serif;
+}
+
+*:focus {
+	outline: none;
+}
+
+.wrapper {
+	padding: 0;
+	margin:0;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	box-shadow: 0 8px 30px 2px rgba(0, 0, 0, .5);
+}
+
+.img-container {
+	max-width: 800px;
+	height: auto;
+}
+
+.about, .s1, .s2, .s3, .s4, .s5, .s6 {
+	width: 100%;
+	height: auto;
+	padding: 100px 50px;
+	color: #303030;
+}
+
+.btn {
+	display: inline-block;
+	padding: 15px 18px;
+	margin: 25px 0;
+	border: 1px solid #00CCA0;
+	background: transparent;
+	color: #00CCA0;
+	border-radius: 50px;
+	text-transform: uppercase;
+	transition: all .35s;
+}
+
+.btn:hover {
+	background: #00CCA0;
+	color: #4CFFD9;
+}
+
+/* 
+==================================================
+Grid Layout
+================================================== 
+*/
+
+.row {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin: 0 0 20px 0;
+}
+
+.col {
+	padding: 20px;
+}
+
+.row .col {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+.row-halves, .row-thirds, .row-fourths {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.row-halves .col {
+	width: 49%;
+}
+
+.row-thirds .col {
+	width: 32%;
+}
+
+.row-fourths .col {
+	width: 24%;
+}
+
+/* 
+==================================================
+Top Bar
+================================================== 
+*/
+
+.top-bar {
+	position: fixed;
+	top: 0;
+	z-index: 1; 
+	text-align: right;
+	padding: 8px 50px;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.2);
+	font-size: .8em;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.top-bar ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.top-bar ul li {
+	display: inline;
+	padding: 0 10px;
+	margin: 0;
+	color: red;
+}
+
+/* 
+==================================================
+Standard Nav
+================================================== 
+*/
+
+.standard-nav {
+	position: fixed;
+	z-index: 1;
+	top: 0px;
+	width: 100%;
+	background: #168BC3;
+	padding: 20px 10px;
+	text-align: center;
+}
+
+.standard-nav a {
+	text-decoration: none;
+	color: #eee;
+	padding: 0 30px;
+	text-transform: uppercase;
+	letter-spacing: 0px;
+	border-left: 1px solid #424242;
+	transition: all .35s;
+}
+
+.standard-nav a:last-child {
+	border-right: 1px solid #424242;
+}
+
+.standard-nav a:hover {
+	color: #00CCA0;
+}
+
+
+/*
+==================================================
+Mobile Nav
+================================================== 
+*/
+
+button {
+	background: none;
+	border: none;
+	margin: 20px;
+}
+
+button:focus {
+	outline: none;
+}
+
+.contain {
+	position:relative;
+	display: inline-block;
+	cursor: pointer;
+	z-index: 9999;
+}
+
+.change .container {
+	transform: rotate(90deg);
+}
+
+.brand {
+	color: #fff;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+	width: 25px;
+	height: 2px;
+	background-color: #fff;
+	border-radius: 2px;
+	margin: 4px 0;
+	transition: 0.4s;
+}
+
+.change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-6px, 6.5px);
+	transform: rotate(-45deg) translate(-5.5px, 4.5px);
+	top: 50px;
+	
+	background: #E00049;
+}
+
+.change .bar2 {
+	position: relative;
+	-webkit-transform: translate(30px, 0px); 
+	transform: translate(30px, 0px); 
+	background: #E00049;
+	opacity: 0;
+}
+
+.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-7px, -8px);
+	transform: rotate(45deg) translate(-4px, -3px);
+	background: #E00049;
+}
+
+
+.mobile-navbar {
+	position: fixed;
+	z-index:3;
+	width: 100%;
+	height: 58px;
+	display: none;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center; 
+	padding: 0 40px;
+	background-color: #222;	
+}
+
+button:focus {
+	outline: 0;
+}
+
+.open-menu {
+	cursor: pointer;
+	transition: transform 0.3s;
+	color: #fff;
+}
+
+.button:hover,
+.open-menu:hover {
+	transform: scale(1.1);
+} 
+/* Overlay */
+
+.overlay {
+	position: fixed;
+	z-index: 2;
+	background: rgba(0, 0, 0, 0.8);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+	overflow: auto;
+}
+
+.overlay.open {
+	opacity: 1;
+	visibility: visible;
+	height: 100%;
+}
+
+.overlay nav {
+	position: relative;
+	height: 300px;
+	top: 300px;
+	transform: translateY(-50%);
+	text-align: center;
+}
+
+.overlay ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: inline-block;
+	position: relative;
+	left: 1%;
+	height: 100%;
+}
+
+.overlay ul li {
+	vertical-align: middle;
+	display: block;
+	position: relative;
+	opacity: 0;
+	margin-bottom: 35px;
+	font-family: "Exo 2", sans-serif;
+	font-size: 1.5em;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+
+.overlay ul li a {
+	display: block;
+	position: relative;
+	color: #fff;
+	text-decoration: none;
+	overflow: hidden;
+	transition: all 0.4s;
+}
+
+.overlay ul li a:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 43.5%;
+	width: 0%;
+	transform: translateX(-50%);
+	height: 2px;
+	background: #fff;
+	transition: 0.35s;
+}
+
+.overlay ul li a:hover,
+.overlay ul li a:focus,
+.overlay ul li a:active {
+	color: #fff;
+}
+
+.overlay ul li a:hover:after,
+.overlay ul li a:focus:after,
+.overlay ul li a:active:after {
+	width: 100%;
+	background: #00CCA0;
+}
+
+.overlay.open li {
+	animation: fadeInRight 0.5s ease forwards;
+	animation-delay: 0.2s;
+}
+
+.overlay.open li:nth-of-type(2) {
+	animation-delay: 0.25s;
+}
+
+.overlay.open li:nth-of-type(3) {
+	animation-delay: 0.3s;
+}
+
+.overlay.open li:nth-of-type(4) {
+	animation-delay: 0.45s;
+}
+
+.overlay.open li:nth-of-type(5) {
+	animation-delay: 0.5s;
+}
+
+/* Animation for menu fade in */
+
+@keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		left: 20%;
+	}
+	100% {
+		opacity: 1;
+		left: 0;
+	}
+}
+
+
+/* 
+==================================================
+Hero
+================================================== 
+*/
+
+.hero {
+	width: 100%;
+	height: 768px;
+	background: url("https://res.cloudinary.com/dasjrtxws/image/upload/v1537568088/lucys/jumbo.jpg")no-repeat center;
+	background-size: cover;
+	text-align: center;
+}
+
+.hero header {
+	background: rgba(0, 0, 0, 0.5);
+	padding: 20px 20px;
+	margin: 250px auto;
+	max-width: 600px;
+	color: #eee;
+}
+
+/* 
+==================================================
+Section 1
+================================================== 
+*/
+
+.s1 {
+	background: #eee;
+}
+
+/* 
+==================================================
+Section 2
+================================================== 
+*/
+
+.s2 {
+	background: #fff;
+	
+}
+
+/* 
+==================================================
+Section 3
+================================================== 
+*/
+
+.s3 {
+	background: #eee;
+	
+}
+
+/* 
+==================================================
+Section 4
+================================================== 
+*/
+
+.s4 {
+	background: #fff;
+	
+}
+
+/* 
+==================================================
+Section 5
+================================================== 
+*/
+
+.s5 {
+	background: #eee;
+	
+}
+
+/*
+==================================================
+Section 6
+================================================== 
+*/
+
+.s6 {
+	background: #fff;
+	
+}
+
+/* 
+==================================================
+Footer
+================================================== 
+*/
+
+footer {
+	text-align: center;
+	background: #168BC3;
+	margin: 0;
+}
+
+footer .row {
+	margin: 0!important;
+}
+
+footer a {
+	padding: 0 10px;
+	color: #eee;
+}
+
+footer ul {
+	list-style: none;
+	margin-left: 0;
+	padding-left:0;
+}
+
+footer ul li {
+	display: inline;
+	padding: 0px 10px;
+	color: #eee;
+}
+
+ .mobile {
+	display: none;
+}
+
+/* 
+==================================================
+Media Queries
+================================================== 
+*/
+
+@media(max-width: 1024px) {
+		
+	.row,
+	.row-halves,
+	.row-thirds,
+	.row-fourths {
+		display: block;
+	}
+	
+	.row .col,
+	.row-halves .col,
+	.row-thirds .col,
+	.row-fourths .col	{
+		width: 100%;
+		margin: 0;
+	}
+	
+	.mobile {
+		display: block;
+	}
+	
+	.move {
+		display: none;
+	}
+	
+}
+
+@media (max-width: 768px) {
+		
+	.standard-nav {
+		display: none;
+	}
+	
+	.mobile-navbar {
+		display: flex;
+	}
+	
+	.about, .s1, .s2, .s3, .s4, .s5, .s6 {
+		padding: 100px 0;
+	}
+		}
+
+@media(max-width: 475px) {
+	.hero header {
+		margin: 150px auto;
+	}
+	h1 {
+		font-size: 1.5em;
+	}
+}
+
+
+
+
+</style>
+
+</head>
+<body>
+	
+
+
+<nav class="top-bar">
+	<ul>
+		<li><i class="fab fa-facebook-f"></i></li>
+		<li><i class="fab fa-twitter"></i></li>
+		<li><i class="fas fa-shopping-cart"></i></li>
+	</ul>
+</nav> 
+
+<nav class="standard-nav">
+	<a href="#home">Home</a>
+	<a href="#about">About</a>
+	<a href="#models">Models</a>
+	<a href="#contact">Contact</a>
+</nav>
+
+<nav class="mobile-navbar">
+	<h2 class="brand"><i class="fas fa-crosshairs"></i></h2>
+	<div class="navbar-buttons">
+		<button class="contain open-menu">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</button>
+	</div>
+</nav>
+<!-- Overlay Navigation -->
+<nav class="overlay">
+	<nav class="overlay-menu">
+		<ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#models">Models</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+	</nav>
+</nav>
+<section class="hero" id="home">
+	<div class="row">
+		<div class="col">
+			<br/><br/>
+			<center><div class="thumbnail"><img  src="https://res.cloudinary.com/dasjrtxws/image/upload/v1537595037/lucys/logo4.png" alt="Thumbnail Image 1"></center>
+			
+				<br/><br/>	
+
+				<h1 style="color:#ff0000; ">All About Parties It's All About You!!</h1>
+				<h3 style="color:#a4dbf4; ">Birthdays Weddings Holiday Gratherings Family Reunions.</h3>
+				
+
+		</div>
+	</div>
+</section>
+<div class="wrapper">
+		
+		<div class="container">
+			<center><h1>Bundled Packages</h1></center><br/>
+		    <br/><br/>
+		</div>
+		   
+ 				
+   <div class="row">
+       <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+                <img class="card-img-top" src="https://res.cloudinary.com/dasjrtxws/image/upload/v1538009640/bundle1.jpg" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Gold Package </h4>
+                    <p class="card-text">Price: $600.00</p>
+                </div>
+               
+                        <div class="form-group">
+                            <select class="form-control" name="observations" data-cesta-feira-attribute required>
+                                <!--<option value="">Number</option>-->
+                                <option value="1">1</option>
+                                <!--<option value="40">40</option>
+                                <option value="42">42</option>-->
+                            </select>
+                        </div>
+                        <input type="hidden" value="Product 1" name="product_name" data-cesta-feira-attribute="">
+                        <input type="hidden" value="23.02" name="unity_price" data-cesta-feira-attribute>
+                        <input type="hidden" value="1" data-cesta-feira-item-id />
+                        <input type="hidden" value="shoe" name="item_type" data-cesta-feira-attribute>
+                        <input type="submit" class="btn btn-primary" value="Add to Cart"/>
+                    </form>
+                </div>
+            </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+                <img class="card-img-top" src="https://res.cloudinary.com/dasjrtxws/image/upload/v1538009640/bundle1.jpg" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Silver Package </h4>
+                    <p class="card-text">Price: $600.00</p>
+                </div>
+                    <div class="form-group">
+                            <select class="form-control" name="observations" data-cesta-feira-attribute required>
+                                <!--<option value="">Number</option>-->
+                                <option value="1">1</option>
+                                <!--<option value="40">40</option>
+                                <option value="42">42</option>-->
+                            </select>
+                        </div>
+                        <input type="hidden" value="Product 1" name="product_name" data-cesta-feira-attribute="">
+                        <input type="hidden" value="23.02" name="unity_price" data-cesta-feira-attribute>
+                        <input type="hidden" value="1" data-cesta-feira-item-id />
+                        <input type="hidden" value="shoe" name="item_type" data-cesta-feira-attribute>
+                        <input type="submit" class="btn btn-primary" value="Add to Cart"/>
+                    </form>
+                </div>
+            </div>
+       
+      <div class="col-lg-4 col-md-6 mb-4">
+       <div class="card">
+                <img class="card-img-top" src="https://res.cloudinary.com/dasjrtxws/image/upload/v1538009640/bundle1.jpg" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Bronze Package </h4>
+                    <p class="card-text">Price: $600.00</p>
+                </div>
+               
+                        <div class="form-group">
+                            <select class="form-control" name="observations" data-cesta-feira-attribute required>
+                                <!--<option value="">Number</option>-->
+                                <option value="1">1</option>
+                                <!--<option value="40">40</option>
+                                <option value="42">42</option>-->
+                            </select>
+                        </div>
+                        <input type="hidden" value="Product 1" name="product_name" data-cesta-feira-attribute="">
+                        <input type="hidden" value="23.02" name="unity_price" data-cesta-feira-attribute>
+                        <input type="hidden" value="1" data-cesta-feira-item-id />
+                        <input type="hidden" value="shoe" name="item_type" data-cesta-feira-attribute>
+                        <input type="submit" class="btn btn-primary" value="Add to Cart"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+</section>
+ <center><h1>Rentals</h1></center>    
+<section class="s1" id="models">
+		<div class="row-halves">
+			<div class="col">
+				<img src="https://res.cloudinary.com/dasjrtxws/image/upload/v1537846663/jumpers36.jpg">
+			</div>
+			<div class="col">
+				<h1>Jumbers</h1>
+				<p>High quality drones, with amazing cameras. Lorem ipsum dolor sit amet, eos sale clita no, vix id malorum intellegam. Nominati sententiae quo in. Est no quas scripta. Vim eros ubique primis ea, te qui noluisse appellantur.
+				</p>	
+				<form action="" class="form" data-cesta-feira-form>
+
+            <div class="form-group">
+
+              <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+
+            </div>
+
+            <div class="form-group">
+
+              <input type="text" class="form-control" name="observations" data-cesta-feira-attribute placeholder="Observations">
+
+            </div>
+
+            <input type="hidden" value="Product 2" name="product_name" data-cesta-feira-attribute="">
+
+            <input type="hidden" value="12.11" name="unity_price" data-cesta-feira-attribute>
+
+          <input type="hidden" value="other" name="item_type" data-cesta-feira-attribute>
+
+            <input type="hidden" value="2" data-cesta-feira-item-id />
+
+            <input type="submit" class="btn btn-primary" value="Add to Cart"/>
+
+          </form>
+        </div>
+      </div>
+
+    
+</section>
+
+	<section class="s2">
+
+		<div class="row-halves">
+			<div class="col mobile">
+				<img src="https://res.cloudinary.com/dasjrtxws/image/upload/v1538005913/lucys/bundle2.jpg">
+			</div>
+			<div class="col">
+				<h1>Canopies</h1>
+				<p>High quality drones, with amazing cameras. Lorem ipsum dolor sit amet, eos sale clita no, vix id malorum intellegam. Nominati sententiae quo in. Est no quas scripta. Vim eros ubique primis ea, te qui noluisse appellantur.
+				</p>
+				<div class="card-body">
+                    <h4 class="card-title">Product 3</h4>
+                    <p class="card-text">Price: $24,08</p>
+                </div>
+                <div class="card-footer">
+                    <form action="" class="form" data-cesta-feira-form>
+                        <div class="form-group">
+                            <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" name="observations" data-cesta-feira-attribute required>
+                                <option value="">Color</option>
+                                <option value="Red">Red</option>
+                                <option value="Blue">Blue</option>
+                                <option value="Black">Black</option>
+                            </select>
+                        </div>
+                        <input type="hidden" value="Product 3" name="product_name" data-cesta-feira-attribute="">
+                        <input type="hidden" value="24.08" name="unity_price" data-cesta-feira-attribute>
+                        <input type="hidden" value="shirt" name="item_type" data-cesta-feira-attribute>
+                        <input type="hidden" value="3" data-cesta-feira-item-id />
+                        <input type="submit" class="btn btn-primary" value="Add to Cart"/>
+                    </form>
+                </div>
+            </div>
+        
+			<div class="col move">
+				<img src="https://res.cloudinary.com/dasjrtxws/image/upload/v1538005913/lucys/bundle2.jpg">
+      </div>
+    
+
+		
+			
+		</div>
+	</section>
+
+	<section class="s3">
+		<div class="row-halves">
+			<div class="col">
+				<img src="https://images.unsplash.com/photo-1488462104523-514bea5f99b3?ixlib=rb-0.3.5&s=885dcffb63738be611e75eb8e6c82b58&auto=format&fit=crop&w=1957&q=80">
+			</div>
+			<div class="col">
+				<h1>Tables</h1>
+				<p>High quality drones, with amazing cameras. Lorem ipsum dolor sit amet, eos sale clita no, vix id malorum intellegam. Nominati sententiae quo in. Est no quas scripta. Vim eros ubique primis ea, te qui noluisse appellantur.
+				</p>
+				
+          <p class="card-text">Price: $24,08</p>
+
+          <form action="" class="form" data-cesta-feira-form>
+
+            <div class="form-group">
+
+              <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+
+            </div>
+
+            <div class="form-group">
+
+              <select class="form-control" name="observations" data-cesta-feira-attribute required>
+
+                <option value="">Color</option>
+
+                <option value="Red">Red</option>
+
+                <option value="Blue">Blue</option>
+
+                <option value="Black">Black</option>
+
+              </select>
+
+            </div>
+
+            <input type="hidden" value="Product 3" name="product_name" data-cesta-feira-attribute="">
+            <input type="hidden" value="24.08" name="unity_price" data-cesta-feira-attribute>
+
+            <input type="hidden" value="shirt" name="item_type" data-cesta-feira-attribute>
+
+            <input type="hidden" value="3" data-cesta-feira-item-id />
+
+            <input type="submit" class="btn btn-primary" value="Add to Cart"/>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+			</div>
+			 
+		</div>
+	</section>
+
+	<section class="s4">
+		<div class="row-halves">
+			<div class="col mobile">
+				<img src="https://images.unsplash.com/photo-1508861147305-f48512b7a29b?ixlib=rb-0.3.5&s=3c6115132ee7fb03170bec6f4561a7c7&auto=format&fit=crop&w=1950&q=80">
+			</div>
+			<div class="col">
+				<h1>Chairs</h1>
+				<p>High quality drones, with amazing cameras. Lorem ipsum dolor sit amet, eos sale clita no, vix id malorum intellegam. Nominati sententiae quo in. Est no quas scripta. Vim eros ubique primis ea, te qui noluisse appellantur.
+				</p>
+				<div class="card-body">
+                    <h4 class="card-title">Product 3</h4>
+                    <p class="card-text">Price: $24,08</p>
+                </div>
+                <div class="card-footer">
+                    <form action="" class="form" data-cesta-feira-form>
+                        <div class="form-group">
+                            <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" name="observations" data-cesta-feira-attribute required>
+                                <option value="">Color</option>
+                                <option value="Red">Red</option>
+                                <option value="Blue">Blue</option>
+                                <option value="Black">Black</option>
+                            </select>
+                        </div>
+                        <input type="hidden" value="Product 3" name="product_name" data-cesta-feira-attribute="">
+                        <input type="hidden" value="24.08" name="unity_price" data-cesta-feira-attribute>
+                        <input type="hidden" value="shirt" name="item_type" data-cesta-feira-attribute>
+                        <input type="hidden" value="3" data-cesta-feira-item-id />
+                        <input type="submit" class="btn btn-primary" value="Add to Cart"/>
+                    </form>
+                </div>
+            </div>
+        
+			<div class="col move">
+				<img src="https://images.unsplash.com/photo-1508861147305-f48512b7a29b?ixlib=rb-0.3.5&s=3c6115132ee7fb03170bec6f4561a7c7&auto=format&fit=crop&w=1950&q=80">
+			</div>
+		</div>
+	</section>
+
+	<section class="s5">
+		<div class="row-halves">
+			<div class="col">
+				<div class="img-container">
+					<img src="https://images.unsplash.com/photo-1482050340796-deca383195b0?ixlib=rb-0.3.5&s=9111803ca9b243be5c734f6a66c2c047&auto=format&fit=crop&w=1950&q=80">
+				</div>
+
+			</div>
+			<div class="col">
+				<h1>Lights</h1>
+				<p>High quality drones, with amazing cameras. Lorem ipsum dolor sit amet, eos sale clita no, vix id malorum intellegam. Nominati sententiae quo in. Est no quas scripta. Vim eros ubique primis ea, te qui noluisse appellantur.
+				</p>
+				<p class="card-text">Price: $24,08</p>
+          
+          <form action="" class="form" data-cesta-feira-form>
+
+            <div class="form-group">
+
+              <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+
+            </div>
+
+            <div class="form-group">
+
+              <select class="form-control" name="observations" data-cesta-feira-attribute required>
+
+                <option value="">Color</option>
+
+                <option value="Red">Red</option>
+
+                <option value="Blue">Blue</option>
+
+                <option value="Black">Black</option>
+
+              </select>
+
+            </div>
+
+            <input type="hidden" value="Product 3" name="product_name" data-cesta-feira-attribute="">
+            <input type="hidden" value="24.08" name="unity_price" data-cesta-feira-attribute>
+
+            <input type="hidden" value="shirt" name="item_type" data-cesta-feira-attribute>
+
+            <input type="hidden" value="3" data-cesta-feira-item-id />
+
+            <input type="submit" class="btn btn-primary" value="Add to Cart"/>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+			</div>
+		</div>
+		</section>
+
+		<section class="s6">
+		<div class="row-halves">
+			<div class="col mobile">
+				<img src="https://res.cloudinary.com/dasjrtxws/image/upload/c_scale,w_600/v1537713210/Screen_shot_2010-08-20_at_1.04.29_PM.png">
+			</div>
+			<div class="col">
+				<h1>misc</h1>
+				<p>High quality drones, with amazing cameras. Lorem ipsum dolor sit amet, eos sale clita no, vix id malorum intellegam. Nominati sententiae quo in. Est no quas scripta. Vim eros ubique primis ea, te qui noluisse appellantur.
+				</p>
+				<div class="card-body">
+                     <p class="card-text">Price: $24,08</p>
+                </div>
+                <div class="card-footer">
+                    <form action="" class="form" data-cesta-feira-form>
+                        <div class="form-group">
+                            <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" name="observations" data-cesta-feira-attribute required>
+                                <option value="">Color</option>
+                                <option value="Red">Red</option>
+                                <option value="Blue">Blue</option>
+                                <option value="Black">Black</option>
+                            </select>
+                        </div>
+                        <input type="hidden" value="Product 3" name="product_name" data-cesta-feira-attribute="">
+                        <input type="hidden" value="24.08" name="unity_price" data-cesta-feira-attribute>
+                        <input type="hidden" value="shirt" name="item_type" data-cesta-feira-attribute>
+                        <input type="hidden" value="3" data-cesta-feira-item-id />
+                        <input type="submit" class="btn btn-primary" value="Add to Cart"/>
+                    </form>
+                </div>
+            </div>
+        			
+			<div class="col move">
+				<img src="https://res.cloudinary.com/dasjrtxws/image/upload/c_scale,w_600/v1537713210/Screen_shot_2010-08-20_at_1.04.29_PM.png">
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="row">
+			<div class="col">
+				<a href="#home">Home</a>
+				<a href="#about">About</a>
+				<a href="#models">Models</a>
+				<a href="#contact">Contact</a>
+				<ul>
+					<li><i class="fab fa-facebook-f"></i></li>
+					<li><i class="fab fa-twitter"></i></li>
+					<li><i class="fas fa-shopping-cart"></i></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jStorage/0.4.12/jstorage.min.js"></script>
+<script src=".Shopping-Cart-Manipulation-Plugin-jQuery-Cesta-Feira/src/cesta-feira.js"></script>
+
+
+<script type="application/javascript">
+  $( document ).ready(function() {
+    $.CestaFeira({
+      debug: false,
+      onItemAdded: function (item) {
+        console.log(item);
+      },
+      onItemUpdated: function (item) {
+        console.log(item);
+      }
+    });
+  });
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
